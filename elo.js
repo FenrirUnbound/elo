@@ -1,5 +1,5 @@
 var calc = (function (winner, loser, winKills, winDeaths) {
-  var k = 30,
+  var k = 40,
       g,
       w = 1,
       diff = winner - loser,
@@ -26,13 +26,13 @@ var calc = (function (winner, loser, winKills, winDeaths) {
   console.log('scoreDiff:  ' + scoreDiff);
   console.log('diff:  ' + diff);
 
-  printMe = winner+(30)*(g)*(w-(1/((Math.pow(10,(-1*(diff)/400)))+1)));
+  printMe = winner+(k)*(g)*(w-(1/((Math.pow(10,(-1*(diff)/400)))+1)));
 
   console.log(printMe);
 
   w = (w) ? 0 : 1;
   console.log('w:  ' + w);
 
-  printMe = loser+(30)*(g)*(w-(1/((Math.pow(10,(-1*(diff)/400)))+1)));
+  printMe = loser+(k)*(g)*(w-(1/((Math.pow(10,(-1*(diff)/400)))+1)));
   console.log(printMe);
 });
